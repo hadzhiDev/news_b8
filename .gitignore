@@ -1,0 +1,9 @@
+db.sqlite3
+migrations
+
+venv 
+
+venv/
+
+.env
+
