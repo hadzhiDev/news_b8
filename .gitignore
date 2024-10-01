@@ -1,6 +1,8 @@
 db.sqlite3
 migrations
 
+migrations/
+
 venv 
 
 venv/
