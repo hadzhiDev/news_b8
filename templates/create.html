@@ -1,0 +1,10 @@
+<div>
+    <h3>Create new news:</h3>
+    <form action="{% url 'create_news' %}" method="POST" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div>
+            <button type="submit" class="">Create</button>
+        </div>
+    </form>
+</div>

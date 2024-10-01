@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .flex{
+            display: flex;
+            gap: 30px;
+            
+        }
+
+        .flex > div{
+            border: 1px solid;
+            padding: 20px;
+        }
+    </style>
+    <div class='flex'>
+        {% for news in news_list %}
+            <div>
+                <div>{{ news.title }}</div>
+                <div>{{ news.category.name }}</div>
+                <div>{{ news.description }}</div>
+                <div>{{ news.content }}</div>
+                <div>
+                    {% for comment in news.comments.all %}
+                        <div>
+                            <h1>{{ comment.name }}</h1>
+                            <p>{{ comment.text }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+
+    
+    
+</body>
+</html>
